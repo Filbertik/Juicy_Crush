@@ -1,3 +1,3 @@
 # Vanilla-vite-template
 
-double of our project
+double of our project with
