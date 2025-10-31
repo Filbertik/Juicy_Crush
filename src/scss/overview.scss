@@ -1,0 +1,119 @@
+.overview {
+  background-image: $_gradient_decline;
+  padding-top: 40px;
+}
+
+.overview-container {
+  position: relative;
+}
+
+.over_h2 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 125%;
+  text-align: center;
+  color: var(--linel-1);
+}
+
+.over_h3 {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--linel-1);
+}
+
+.over-text-accent {
+  font-weight: 700;
+  background: linear-gradient(90deg, #f97316 0%, #ec4899 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.over_p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 187%;
+  text-align: center;
+  color: #4b5563;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 1200px) {
+  .overview-container {
+    padding-top: 80px;
+    padding-bottom: 98px;
+  }
+
+  .over_h2 {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    color: var(--linel-1);
+  }
+
+  .over_h3 {
+    margin-top: 12px;
+    margin-bottom: 24px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 32px;
+    text-align: center;
+    color: var(--linel-1);
+  }
+
+  .over-text-accent {
+    font-weight: 700;
+    background: linear-gradient(90deg, #f97316 0%, #ec4899 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.overview-bg {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.image-ow {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 106px;
+  z-index: 2;
+}
+
+@media (min-width: 1200px) {
+  .imageow {
+    width: 280px;
+  }
+
+  .image-ow {
+    width: 291px;
+    height: 332px;
+    bottom: 80px;
+    right: 20px;
+  }
+
+  .overview {
+    padding-top: 0;
+  }
+
+  .overview-bg {
+    margin-top: 40px;
+    padding-bottom: 0;
+  }
+
+  .over_p {
+    margin-bottom: 0;
+  }
+}

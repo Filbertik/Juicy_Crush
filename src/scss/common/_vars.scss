@@ -1,0 +1,16 @@
+$_gradient_from: #f97316;
+$_gradient_to: #ec4899;
+$_gradient_button: linear-gradient(90deg, #f97316 0%, #ec4899 100%);
+$_gradient_button_clicked: linear-gradient(
+  90deg,
+  rgba(249, 115, 22, 0.7) 0%,
+  rgba(236, 72, 153, 0.7) 100%
+);
+$_gradient_decline: linear-gradient(90deg, #fff7ed 0%, #fdf2f8 100%);
+$_decline_clicked: linear-gradient(90deg, #efefef 0%, #efefef 100%);
+
+$_light_bg_color: #fffefe;
+
+// Transition vars
+$_transition_duration: 350ms;
+$_transition_timing_function: ease;

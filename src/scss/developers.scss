@@ -1,0 +1,65 @@
+.developers {
+  background: linear-gradient(90deg, #fff7ed 0%, #fdf2f8 100%);
+}
+
+.dev {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.dev_img {
+  display: none;
+}
+
+.devs_h {
+  @include poppins(700);
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.devs_p {
+  @include poppins(400);
+  font-size: 16px;
+  line-height: 1.875;
+  text-align: center;
+  color: #4b5563;
+}
+
+.devs_accent {
+  font-weight: 700;
+  background: linear-gradient(90deg, #f97316 0%, #ec4899 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 1200px) {
+  .devs_h {
+    @include font(36, 54);
+    margin-bottom: 24px;
+    text-align: left;
+  }
+
+  .devs_p {
+    text-align: left;
+    width: 454px;
+  }
+
+  .dev {
+    padding-top: 185px;
+    padding-bottom: 185px;
+    position: relative;
+  }
+
+  .dev_img {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 653px;
+    height: 528px;
+  }
+}

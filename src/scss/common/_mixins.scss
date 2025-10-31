@@ -1,0 +1,94 @@
+@use 'sass:math';
+@import './breakpoints';
+/*
+screen types: 
+    mobile,
+    desktop,
+*/
+@mixin media($_screen) {
+  @if $_screen == mobile {
+    @media screen and (min-width: $mobile) {
+      @content;
+    }
+  } @else if $_screen == desktop {
+    @media screen and (min-width: $desktop) {
+      @content;
+    }
+  }
+}
+
+@mixin font($_fsz, $_lnh) {
+  font-size: #{$_fsz}px;
+
+  $result: math.div($_lnh, $_fsz);
+
+  line-height: math.div(math.round($result * 100), 100);
+}
+
+@mixin poppins($weight) {
+  font-family: 'Poppins', sans-serif;
+  font-weight: $weight;
+  font-style: normal;
+}
+
+@mixin gradient-text() {
+  background-image: $_gradient_button;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin gradient-button() {
+  border-radius: 12px;
+  background-image: $_gradient_button;
+  border: none;
+  @include poppins(500);
+  @include font(16, 23);
+  text-align: center;
+  color: #fff;
+
+  &:active {
+    background-image: $_gradient_button_clicked;
+  }
+}
+
+@mixin transition($props...) {
+  $propsList: ();
+  @each $prop in $props {
+    $propsList: append($propsList, $prop, comma);
+  }
+  transition-property: #{$propsList};
+  transition-duration: $_transition_duration;
+  transition-timing-function: $_transition_timing_function;
+  transition-delay: 0;
+}
+
+@mixin gradientTransition($toGradient, $toColor: #fff) {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    inset: 0;
+    background: $toGradient;
+    background-color: $toColor;
+    opacity: 0;
+    @include transition(opacity);
+    z-index: 0;
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:active::before {
+    opacity: 1;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 2;
+  }
+}

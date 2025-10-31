@@ -1,0 +1,96 @@
+.sounds {
+  background-color: $_light_bg_color;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+// vk
+
+.sound {
+  border-radius: 12px;
+  width: 280px;
+  height: 299px;
+  background: linear-gradient(90deg, #f97316 0%, #ec4899 100%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 22px 10px;
+}
+
+.sound_h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 2.08333;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.sound_p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5625;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.sound-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0px solid #e5e7eb;
+  border-radius: 12px;
+  width: 260px;
+  height: 56px;
+  background: #fffefe;
+  @include transition(background);
+}
+
+.sound-cta-p {
+  @include poppins(500);
+  @include font(16, 23);
+  text-align: center;
+  background: linear-gradient(90deg, #f97316 0%, #ec4899 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sound-cta:hover,
+.sound-cta:active,
+.sound-cta:focus {
+  background: #efefef;
+}
+
+@media (min-width: 1200px) {
+  .sound {
+    border-radius: 12px;
+    width: 1008px;
+    height: 300px;
+    padding: 46px 86px;
+  }
+
+  .sound_h2 {
+    @include font(36, 54);
+    color: #fffefe;
+    margin-bottom: 24px;
+  }
+
+  .sound_p {
+    font-size: 20px;
+    line-height: 1.25;
+    color: #fffefe;
+    margin-bottom: 24px;
+  }
+
+  .sounds {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .sound-cta {
+    width: 210px;
+  }
+}

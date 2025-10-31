@@ -1,0 +1,61 @@
+<header class="header" id="header">
+  <div class="container">
+    <div class="header-container">
+      <a class="header-logo" href="./" title="logo">
+        <picture class="header-img">
+          <source
+            srcset="./img/header/logo.png 1x, ./img/header/logo@2x.png 2x"
+            media="(max-width: 1199px)"
+          />
+
+          <!-- Десктопна версія -->
+          <source
+            srcset="
+              ./img/header/logo-desktop.png    1x,
+              ./img/header/logo-desktop@2x.png 2x
+            "
+            media="(min-width: 1200px)"
+          />
+
+          <!-- Фолбек для старих браузерів -->
+          <img src="./img/header/logo-desktop@2x.png" alt="Logo" />
+        </picture>
+      </a>
+      <nav class="header_nav">
+        <ul class="header_menu">
+          <li>
+            <a href="#overview" data-text="Game Overview">Game Overview</a>
+          </li>
+          <li><a href="#features" data-text="Features">Features</a></li>
+          <li><a href="#play" data-text="How to Play">How to Play</a></li>
+          <li>
+            <a href="#game" data-text="Day in the Game">Day in the Game</a>
+          </li>
+          <li>
+            <a href="#sounds" data-text="The Art of Sound">The Art of Sound</a>
+          </li>
+          <li>
+            <a href="#developers" data-text="Developer’s Insights"
+              >Developer’s Insights</a
+            >
+          </li>
+          <li>
+            <a href="#speedrun" data-text="Speedrun Challenges"
+              >Speedrun Challenges</a
+            >
+          </li>
+          <li>
+            <a href="#secrets" data-text="Easter Eggs & Hidden Secrets"
+              >Easter Eggs & Hidden Secrets</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <button class="header-menu-button" id="menu-button" title="menu button">
+        <!-- <svg class="icon" width="48" height="48">
+          <use href="./img/sprite.svg#icon-burger"></use>
+        </svg> -->
+      </button>
+    </div>
+  </div>
+</header>
